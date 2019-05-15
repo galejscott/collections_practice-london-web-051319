@@ -30,10 +30,12 @@ def sum_array(array)
   array.inject(:+)
 end
 
-def add_s(array)
-  array.map.with_index do |word, array| 
-    if array == 1 
+def add_s (array)
+  array.collect.with_index do |word, index|
+    if index == 1 
+      word 
     else 
       word + "s"
     end
+  end
 end
